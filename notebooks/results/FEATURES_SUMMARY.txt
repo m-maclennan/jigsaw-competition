@@ -1,0 +1,20 @@
+TEXT_COL=body
+TARGET_COL=rule_violation
+ID_COL=row_id
+n_train_features=42
+TOP_15_MI_FEATURES:
+- avg_word_len: 0.067606
+- md_links: 0.044872
+- char_count: 0.041142
+- caps_ratio: 0.040016
+- excl_ratio: 0.036055
+- ques_ratio: 0.035856
+- punct_ratio: 0.033731
+- uniq_word_count: 0.030241
+- negate_count: 0.025696
+- you_ratio: 0.023116
+- num_ratio: 0.021872
+- word_count: 0.021510
+- i_ratio: 0.021109
+- you_count: 0.019515
+- lexical_diversity: 0.015952

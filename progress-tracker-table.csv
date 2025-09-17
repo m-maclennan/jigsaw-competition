@@ -1,0 +1,6 @@
+﻿Date,Model,Local CV (F1-macro),Public LB,Rank,Percentile
+10/09/2025,Baseline TF-IDF + LR,0.7385 (±0.0301),TBD,TBD,TBD
+TBD,XGBoost (with features),,TBD,TBD,TBD
+TBD,DistilBERT fine-tuned,,TBD,TBD,TBD
+TBD,Ensemble (LR+XGB+BERT),,TBD,TBD,TBD
+TBD,Final Calibrated Ensemble,,TBD,TBD,TBD
