@@ -1,0 +1,17 @@
+{
+  "task": "3.1_neural_baseline_hybrid",
+  "model": "Hybrid CNN+BiGRU + 42 feats",
+  "val_f1_macro": 0.7754684072028053,
+  "best_threshold": 0.32,
+  "seed": 42,
+  "params": {
+    "max_tokens": 30000,
+    "seq_len": 200,
+    "batch": 64,
+    "epochs": 16,
+    "embed_dim": 128,
+    "gru_units": 96,
+    "dropout_rate": 0.35,
+    "l2": 1e-05
+  }
+}
