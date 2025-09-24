@@ -1,0 +1,11 @@
+{
+  "task": "05_ensemble",
+  "time": "2025-09-24T09:02:41",
+  "models": [
+    "logreg_tfidf_feats",
+    "xgb_tfidf_feats"
+  ],
+  "winner": "rank",
+  "oof_f1_macro": 0.7391063155999839,
+  "threshold": 0.4375
+}

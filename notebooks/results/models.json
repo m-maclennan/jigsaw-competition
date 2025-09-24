@@ -1,0 +1,8 @@
+{
+  "xgb_tfidf_feats": {
+    "val_f1": 0.7684563758389261
+  },
+  "logreg_tfidf_feats": {
+    "val_f1": 0.7684563758389261
+  }
+}

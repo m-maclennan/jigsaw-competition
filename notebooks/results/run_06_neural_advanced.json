@@ -1,0 +1,13 @@
+{
+  "task": "3.2_neural_advanced",
+  "best": {
+    "variant": "V1_StackedBiGRU_Attn",
+    "val_f1_macro": 0.749368929961922,
+    "threshold": 0.5299999999999999,
+    "seq_len": 200,
+    "batch": 64,
+    "dropout": 0.35
+  },
+  "seed": 42,
+  "time": "2025-09-23T08:59:17"
+}
