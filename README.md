@@ -49,4 +49,4 @@ Workflow Tips
 Goals
 
 * Achieve strong validation F1 and fair, interpretable models
-* Deliver both course and competition submissions plus documentation: executive summary, technical report, datasheet, model card, visuals
+* Deliver both course and competition submissions plus documentation: executive summary, data & model cards
