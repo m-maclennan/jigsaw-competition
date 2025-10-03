@@ -1,44 +1,50 @@
 Jigsaw Agile Community Rules — Community Crisis Prevention System
 
-Project outline
+Project Overview
+Predict subreddit rule violations to help moderators act faster.
+Includes end-to-end ML pipeline: data → features → baseline → advanced models → submission.
+Notebooks are Kaggle-safe and work both locally and on Kaggle.
+Features include ~42 handcrafted text/structural/platform features.
+Models include TF-IDF + Logistic Regression, XGBoost, and ensemble/calibration options.
 
-* Purpose: Predict subreddit rule violations to help moderators act faster.
+Repository Structure
+data/raw/              (train.csv, test.csv, sample_submission.csv)
+data/processed/        (engineered features, splits)
+notebooks/             (01_EDA, 02_baseline, 03_features, 04_advanced, 05_calibration, etc)
+models/                (saved models, checkpoints)
+submissions/           (submission CSVs)
+results/               (logs, error analysis, metrics)
+docs/                  (executive summary, technical report, datasheet, model card)
 
-* What’s here: End-to-end workflow, Kaggle-safe notebooks, 42 lightweight text features, TF-IDF + Logistic Regression baseline, XGBoost path, and submission scripts.
+Setup and Quickstart
 
-Data
+Local:
 
-* Place train.csv, test.csv, and sample\_submission.csv in data/raw/.
-* Notebooks auto-detect paths locally and on Kaggle (so that there's no need to mirror Kaggle folders exactly).
+* Python 3.10+
+* Install numpy<2, pandas, scikit-learn, scipy, xgboost, matplotlib
+* Place data in data/raw/
+* Run notebooks in order
 
-Quickstart (local)
+Kaggle:
 
-* Use Python 3.10+.
-* Create a clean env and install: numpy<2, pandas, scikit-learn, scipy, xgboost, matplotlib.
-* Run notebooks in numerical order.
-
-Quickstart (Kaggle)
-
-* Duplicate the notebook, set Internet: OFF.
-* Ensure the notebook writes /kaggle/working/submission.csv.
-* Submit the version that produced submission.csv.
-
-Repository structure
-jigsaw-competition/
-├─ data/
-│  ├─ raw/                      (train.csv, test.csv, sample\_submission.csv)
-│  └─ processed/                (engineered features, splits)
-├─ notebooks/
-│  ├─ 01\_EDA.ipynb
-│  ├─ 02\_baseline\_models.ipynb
-│  ├─ 03\_feature\_engineering.ipynb
-│  └─ 04\_advanced\_models.ipynb
-├─ models/                      (saved models, optional)
-├─ submissions/                 (local CSVs)
-├─ results/                     (MI ranks, error analysis, scores log)
-└─ docs/                        (executive summary, technical report, datasheet, model card)
+* Internet OFF
+* Ensure notebook writes /kaggle/working/submission.csv
+* Submit the generated file
 
 Notes
 
-* 03\_feature\_engineering builds 42 platform/tone/structure features and can also produce a Kaggle-ready submission.csv if needed.
-* 04\_advanced\_models stacks TF-IDF + features and trains XGBoost with early stopping; logs validation F1.
+* Feature engineering builds 42 features and can produce submission.csv
+* Advanced models stack TF-IDF + features with XGBoost and log validation F1
+* Calibration/ensemble improves probability estimates and final performance
+
+Workflow Tips
+
+* Keep raw vs processed data separate
+* Version submissions and log results
+* Store plots and error analysis in results/
+* Ensure the full pipeline runs cleanly and within Kaggle limits
+
+Goals
+
+* Achieve strong validation F1 and fair, interpretable models
+* Deliver both course and competition submissions plus documentation: executive summary, technical report, datasheet, model card, visuals
